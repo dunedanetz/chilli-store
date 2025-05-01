@@ -1,0 +1,17 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Домашна ферма за люти семена "Горещо пате!" 🌶️</title>
+</head>
+<body>
+    <h1>Добре дошли при Горещото пате!</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            <strong>{{ product.name }}</strong>: {{ product.description }} — ${{ product.price }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
