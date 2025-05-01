@@ -8,4 +8,6 @@ def test_home():
     tester = app.test_client()
     response = tester.get('/')
     assert response.status_code == 200
-    assert b'Chilli Pepper Store' in response.data
+
+    html = response.data.decode('utf-8')
+    assert 'Домашна ферма за люти семена "Горещо пате!"' in html
